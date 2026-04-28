@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Guardião Digital</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+
+  <meta name="theme-color" content="#ef4444">
+</head>
+
+<body>
+
+<header>
+  <h1>🛡️ Guardião Digital</h1>
+  <p>Proteção contra golpes digitais</p>
+</header>
+
+<main>
+  <h2>🚨 Analise mensagens suspeitas</h2>
+
+  <textarea id="input" placeholder="Cole mensagem ou link suspeito..."></textarea>
+
+  <button onclick="analisar()">🔍 Analisar</button>
+
+  <div id="resultado"></div>
+</main>
+
+<footer>
+  <p>Não armazenamos suas mensagens</p>
+</footer>
+
+<script src="app.js"></script>
+
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('service-worker.js');
+}
+</script>
+
+</body>
+</html>
